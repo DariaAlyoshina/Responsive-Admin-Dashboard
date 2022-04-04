@@ -570,7 +570,7 @@ main a{
 
     aside {
         position: fixed;
-        left: 0;
+        left: -100%;
         min-height: 100vh;
         background: var(--color-white);
         width: 18rem;
@@ -578,6 +578,13 @@ main a{
         box-shadow: 1rem 3rem 4rem var(--color-light);
         padding-right: var(--card-padding);
         display: none;
+        animation: showMenu 400ms ease forwards;
+    }
+
+    @keyframes showMenu {
+        to{
+            left: 0;
+        }
     }
 
     aside .logo{
